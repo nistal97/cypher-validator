@@ -1,0 +1,6 @@
+*.java
+*.class
+.build/
+vendor/
+.idea/
+
