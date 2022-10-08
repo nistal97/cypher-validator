@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cypher-generator/pkg/util"
+	"cypher-validator/pkg/util"
 	"flag"
 	"os"
 )

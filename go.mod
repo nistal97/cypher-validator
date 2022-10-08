@@ -1,4 +1,4 @@
-module cypher-generator
+module cypher-validator
 
 go 1.18
 

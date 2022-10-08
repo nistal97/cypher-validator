@@ -10,6 +10,7 @@ var Logger *zap.SugaredLogger
 
 func InitLogger() {
 	atom := zap.NewAtomicLevel()
+	atom.SetLevel(zap.DebugLevel)
 
 	encoderCfg := zap.NewProductionEncoderConfig()
 	encoderCfg.TimeKey = "timestamp"

@@ -6,14 +6,6 @@ import (
 	"testing"
 )
 
-type cypherListener struct {
-	*BaseCypherListener
-}
-
-func (s *cypherListener) VisitErrorNode(node antlr.ErrorNode) {
-	fmt.Printf("Error occured when Parsing %s..", node.GetText())
-}
-
 func TestCypherParser(t *testing.T) {
 	exp := "create (n:label1 {prop:1} )"
 
@@ -43,5 +35,4 @@ func TestCypherParser(t *testing.T) {
 	// Finally parse the expression (by walking the tree)
 	var listener cypherListener
 	antlr.ParseTreeWalkerDefault.Walk(&listener, p.OC_Create())
-
 }
