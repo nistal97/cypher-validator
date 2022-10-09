@@ -31,5 +31,8 @@ func ValidateCypher(exp string, t string) {
 		antlr.ParseTreeWalkerDefault.Walk(&listener, p.OC_Create())
 	case "merge":
 		antlr.ParseTreeWalkerDefault.Walk(&listener, p.OC_Merge())
+	case "unwind":
+		antlr.ParseTreeWalkerDefault.Walk(&listener, p.OC_Unwind())
+
 	}
 }
